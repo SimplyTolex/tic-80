@@ -21,5 +21,5 @@ function tstamp() end
 ---Prints a string to the Console
 ---[Open in Browser](https://github.com/nesbox/TIC-80/wiki/trace)
 ---@param message string
----@param color colors
+---@param color? colors
 function trace(message, color) end

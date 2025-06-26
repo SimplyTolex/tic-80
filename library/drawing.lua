@@ -101,15 +101,15 @@ function line(x0, y0, x1, y1, color) end
 
 ---Draws a map region
 ---[Open in Browser](https://github.com/nesbox/TIC-80/wiki/map)
----@param x number x coordinate of the top left map cell to be drawn
----@param y number y coordinate of the top left map cell to be drawn
----@param w number number of cells to draw horizontally
----@param h number number of cells to draw vertically
----@param sx number x screen coordinate where drawing of the map section will start
----@param sy number y screen coordinate where drawing of the map section will start
----@param transparentColor colors|colors[] transparent color(s) (defaults to -1 = opaque)
----@param scale number map scaling (defaults to 1)
----@param remap remap function called before every tile is drawn (defaults to nil)
+---@param x? number x coordinate of the top left map cell to be drawn
+---@param y? number y coordinate of the top left map cell to be drawn
+---@param w? number number of cells to draw horizontally
+---@param h? number number of cells to draw vertically
+---@param sx? number x screen coordinate where drawing of the map section will start
+---@param sy? number y screen coordinate where drawing of the map section will start
+---@param transparentColor? colors|colors[] transparent color(s) (defaults to -1 = opaque)
+---@param scale? number map scaling (defaults to 1)
+---@param remap? remap function called before every tile is drawn (defaults to nil)
 function map(x, y, w, h, sx, sy, transparentColor, scale, remap) end
 
 ---Draws a 30x17 map section (full screen) to screen position (0,0)
@@ -150,15 +150,15 @@ function print(text, x, y, color, fixed, scale, smallFont) end
 
 ---Draws the sprite number index ath the x and y coordinates
 ---[Open in Browser](https://github.com/nesbox/TIC-80/wiki/spr)
----@param index any index of the sprite (0..511)
----@param x number
----@param y number
----@param colorkey colors|colors[]
----@param scale number scale factor (defaults to 1
----@param flip spriteFlip flip the sprite vertically or horizontally or both
----@param rotate spriteRotation rotate the sprite by 0, 90, 180 or 270 degrees
----@param w number width of composite sprite
----@param h number height of composite sprite
+---@param index? any index of the sprite (0..511)
+---@param x? number
+---@param y? number
+---@param colorkey? colors|colors[]
+---@param scale? number scale factor (defaults to 1)
+---@param flip? spriteFlip flip the sprite vertically or horizontally or both
+---@param rotate? spriteRotation rotate the sprite by 0, 90, 180 or 270 degrees
+---@param w? number width of composite sprite
+---@param h? number height of composite sprite
 function spr(index, x, y, colorkey, scale, flip, rotate, w, h) end
 
 ---Draws a filled triangle
