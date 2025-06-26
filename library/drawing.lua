@@ -41,37 +41,19 @@ local SPRITE_ROTATION = {
 
 ---Draws a filled circle
 ---[Open in Browser](https://github.com/nesbox/TIC-80/wiki/circ)
----@param x number
----@param y number
----@param radius number
----@param color colors
-function circ(x, y, radius, color) end
+---@alias circ fun(centerX: number, centerY: number, radius: number, colorIndex: colors)
 
 ---Draws the circumference of a circle
 ---[Open in Browser](https://github.com/nesbox/TIC-80/wiki/circb)
----@param x number
----@param y number
----@param radius number
----@param color colors
-function circb(x, y, radius, color) end
+---@alias circb fun(centerX: number, centerY: number, radius: number, colorIndex: colors)
 
 ---Draws a filled ellipse (0.90)
 ---[Open in Browser](https://github.com/nesbox/TIC-80/wiki/elli)
----@param x number
----@param y number
----@param a number
----@param b number
----@param color colors
-function elli(x, y, a, b, color) end
+---@alias elli fun(centerX: number, centerY: number, horizontalRadius: number, verticalRadius: number, colorIndex: colors)
 
 -- Draws an ellipse border (0.90)
----[Open in Browser](https://github.com/nesbox/TIC-80/wiki/ellib)
----@param x number
----@param y number
----@param a number
----@param b number
----@param color colors
-function ellib(x, y, a, b, color) end
+---[Open in Browser](https://github.com/nesbox/TIC-80/wiki/elli)
+---@alias ellib fun(centerX: number, centerY: number, horizontalRadius: number, verticalRadius: number, colorIndex: colors)
 
 ---Sets the screen clipping region
 ---[Open in Browser](https://github.com/nesbox/TIC-80/wiki/clip)
@@ -160,21 +142,11 @@ function print(text, x, y, color, fixed, scale, smallFont) end
 
 ---Draws a filled rectangle
 ---[Open in Browser](https://github.com/nesbox/TIC-80/wiki/rect)
----@param x number
----@param y number
----@param width number
----@param height number
----@param color colors
-function rect(x, y, width, height, color) end
+---@alias rect fun(x: number, y: number, width: number, height: number, color: colors)
 
 ---Draws a one pixel thick rectangle border
 ---[Open in Browser](https://github.com/nesbox/TIC-80/wiki/rectb)
----@param x number
----@param y number
----@param width number
----@param height number
----@param color colors
-function rectb(x, y, width, height, color) end
+---@alias rectb fun(x: number, y: number, width: number, height: number, color: colors)
 
 ---Draws the sprite number index ath the x and y coordinates
 ---[Open in Browser](https://github.com/nesbox/TIC-80/wiki/spr)
@@ -191,25 +163,10 @@ function spr(index, x, y, colorkey, scale, flip, rotate, w, h) end
 
 ---Draws a filled triangle
 ---[Open in Browser](https://github.com/nesbox/TIC-80/wiki/tri)
----@param x1 number
----@param y1 number
----@param x2 number
----@param y2 number
----@param x3 number
----@param y3 number
----@param color colors
-function tri(x1, y1, x2, y2, x3, y3, color) end
+---@alias tri fun(x1: number, y1: number, x2: number, y2: number, x3: number, y3: number, color: colors)
 
 ---Draws a triangle border (0.90)
----[Open in Browser](https://github.com/nesbox/TIC-80/wiki/trib)
----@param x1 number
----@param y1 number
----@param x2 number
----@param y2 number
----@param x3 number
----@param y3 number
----@param color colors
-function trib(x1, y1, x2, y2, x3, y3, color) end
+---@alias trib fun(x1: number, y1: number, x2: number, y2: number, x3: number, y3: number, color: colors)
 
 ---Draws a triangle filled with texture
 ---[Open in Browser](https://github.com/nesbox/TIC-80/wiki/textri)
