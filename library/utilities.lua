@@ -1,13 +1,13 @@
 ---@meta
 
----Retrieves a sprite flag
+---Retrieves a sprite flag (0.80)
 ---[Open in Browser](https://github.com/nesbox/TIC-80/wiki/fget)
 ---@param spriteId integer 0..511
 ---@param flag integer 0..7
 ---@return boolean state
 function fget(spriteId, flag) end
 
----Sets a sprite flag
+---Sets a sprite flag (0.80)
 ---[Open in Browser](https://github.com/nesbox/TIC-80/wiki/fset)
 ---@param spriteId integer 0..511
 ---@param flag integer 0..7
